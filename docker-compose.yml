@@ -1,0 +1,11 @@
+services:
+  morse-code-simulator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8084:4173"
+    container_name: morse-code-simulator
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
